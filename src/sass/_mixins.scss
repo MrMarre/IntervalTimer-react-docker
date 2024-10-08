@@ -1,11 +1,5 @@
 @use './variables' as *;
 
-@mixin basePageSize() {
-  width: $pageWitdh;
-  height: $pageHeight;
-  background-color: grey;
-}
-
 @mixin displayFlex($align: center, $justify: center, $direction: column) {
   display: flex;
   justify-content: $justify;
