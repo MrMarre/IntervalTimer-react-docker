@@ -1,0 +1,26 @@
+@use './variables' as *;
+
+@mixin basePageSize() {
+  width: $pageWitdh;
+  height: $pageHeight;
+  background-color: grey;
+}
+
+@mixin displayFlex($align: center, $justify: center, $direction: column) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: column;
+}
+
+@mixin fontStyling(
+  $weight: $baseFontWeight,
+  $size: $baseFontSize,
+  $color: $baseTextColor,
+  $family: $paragraphFont
+) {
+  font-family: $family;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}

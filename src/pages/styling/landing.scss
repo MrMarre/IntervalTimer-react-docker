@@ -1,0 +1,34 @@
+@use '../../sass' as *;
+
+.loading {
+  @include displayFlex(center, center, column);
+
+  background-color: $backgroundColor;
+
+  &__section {
+    width: 184px;
+    height: 90px;
+    @include displayFlex(center, center, row);
+    margin: 6px 0;
+  }
+  &__button {
+    background-color: transparent;
+    border: none;
+  }
+  &__header {
+    font-family: $loadingFont;
+    font-size: $baseFontSize;
+    color: $loadingFontColor;
+    margin: 0;
+  }
+  &__text {
+    @include fontStyling(
+      $baseFontWeight,
+      $fontSizeSm,
+      $loadingFontColor,
+      $baseFont
+    );
+    letter-spacing: 1.3px;
+    margin: 0;
+  }
+}
