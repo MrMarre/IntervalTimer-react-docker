@@ -1,0 +1,15 @@
+@use '../../sass' as *;
+
+.timer {
+  background-color: $timerBackround;
+
+  &__incrementer {
+    &__minutes {
+    }
+
+    &__text {
+    }
+  }
+  &__controls {
+  }
+}

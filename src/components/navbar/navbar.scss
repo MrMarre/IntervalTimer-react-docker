@@ -1,0 +1,11 @@
+@use '../../sass' as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  .menuButton {
+    margin: 0.8rem;
+    transform: rotate(270deg);
+  }
+}
