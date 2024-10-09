@@ -9,6 +9,7 @@ $baseFontWeight: 400;
 //FontSizes:
 $baseFontSize: 20px;
 $fontSizeSm: 14px;
+$fontSizeBg: 24px;
 
 //Colors
 $baseTextColor: #222222;
@@ -16,8 +17,11 @@ $loadingFontColor: #ffffff;
 
 // Timer, Alarm and break-view backround
 $timerBackround: #eeeeee;
-$backgroundColor: rgba(0, 0, 0, 1);
+$backgroundColor: rgb(0, 0, 0);
 
 // Base page size
 $pageWitdh: 375px;
 $pageHeight: 667px;
+
+// Components general sizing
+$componentWidth: 279px;

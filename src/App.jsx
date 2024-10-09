@@ -11,35 +11,44 @@ import {
 import TimerAnalog from './pages/TimerAnalog';
 import TimerDigital from './pages/TimerDigital';
 import Landing from './pages/landing';
-import SetTimer from './pages/setTimer';
+import SetTimer from './pages/SetTimer';
 import AlarmView from './pages/AlarmView';
 import BreakView from './pages/BreakView';
 import Layout from './pages/Layout';
+import VisualTimer from './pages/VisualTimer';
+import TextTimer from './pages/TextTimer';
+import CirclesTimer from './pages/CirclesTimer';
 
-const routes = [
-  {
-    path: '/',
-    element: <Landing />,
-  },
+export const routes = [
   {
     path: '/setTimer',
     element: <SetTimer />,
+    label: 'Set Timer',
   },
   {
     path: '/timerAnalog',
     element: <TimerAnalog />,
+    label: 'Analog Timer',
   },
   {
     path: '/timerDigital',
     element: <TimerDigital />,
+    label: 'Digital Timer',
   },
   {
-    path: '/alarmView',
-    element: <AlarmView />,
+    path: '/visualTimer',
+    element: <VisualTimer />,
+    label: 'Visual Timer',
   },
   {
-    path: '/breakView',
-    element: <BreakView />,
+    path: '/textTimer',
+    element: <TextTimer />,
+    label: 'Text Timer',
+  },
+  {
+    path: '/circlesTimer',
+    element: <CirclesTimer />,
+    label: 'Circles Timer',
   },
 ];
 
