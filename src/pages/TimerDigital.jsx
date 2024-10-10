@@ -7,13 +7,15 @@ const TimerDigital = () => {
   const location = useLocation();
   const startCount = location.state?.startCount || { minutes: 0, seconds: 0 };
 
-  const { timeValues, isRunning, startTimer } = useTimerLogic({
+  const { timeValues, startTimer } = useTimerLogic({
     countdown: true,
     startValues: startCount,
   });
 
+  const formattedMinutes = String(timeValues.minutes).padStart(2, '0');
+  const formattedSeconds = String(timeValues.seconds).padStart(2, '0');
+
   useEffect(() => {
-    console.log('Initial start count:', startCount);
     startTimer();
   }, [startTimer, startCount]);
 
@@ -23,11 +25,11 @@ const TimerDigital = () => {
         <div className="timer-digital">
           <article className="timer-digital__container">
             <div className="timer-digital__container--minutes">
-              {timeValues.minutes}
+              {formattedMinutes}
             </div>
             <span>:</span>
             <div className="timer-digital__container--seconds">
-              {timeValues.seconds}
+              {formattedSeconds}
             </div>
           </article>
         </div>
