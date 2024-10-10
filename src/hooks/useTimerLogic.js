@@ -6,8 +6,8 @@ export const useTimerLogic = ({ countdown = true, startValues }) => {
   const [timer] = useState(() => new Timer());
   const [timeValues, setTimeValues] = useState({
     secondTenths: 0,
-    seconds: 0,
-    minutes: 0,
+    seconds: startValues.seconds || 0,
+    minutes: startValues.minutes || 0,
     hours: 0,
     days: 0,
   });
@@ -32,7 +32,6 @@ export const useTimerLogic = ({ countdown = true, startValues }) => {
     if (!isRunning && countdown) {
       const { minutes, seconds } = startValues;
       const totalSeconds = minutes * 60 + seconds;
-      console.log('Starting timer with values:', startValues);
       timer.start({ countdown: true, startValues: { seconds: totalSeconds } });
       setIsRunning(true);
     }
