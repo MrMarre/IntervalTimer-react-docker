@@ -1,0 +1,28 @@
+@use '../../sass' as *;
+
+.timer-digital {
+  height: 100%;
+  width: 100%;
+  background-color: $timerBackround;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    width: 182px;
+    height: 104px;
+    background-color: $timerBackround;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $baseTextColor;
+
+    &--minutes,
+    &--seconds,
+    span {
+      font-size: 80px;
+      font-family: $baseFont;
+      font-weight: 700;
+    }
+  }
+}
