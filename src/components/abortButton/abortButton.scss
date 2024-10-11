@@ -1,0 +1,17 @@
+@use '../../sass' as *;
+
+.abort {
+  color: $baseTextColor;
+  font-family: $baseFont;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: $timerBackround;
+  width: 132px;
+  height: 41px;
+  border: 1px black solid;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 18rem;
+  opacity: 60%;
+}
