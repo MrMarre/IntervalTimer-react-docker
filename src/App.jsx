@@ -74,7 +74,3 @@ function App() {
 }
 
 export default App;
-
-// <Route path="/setTimer" element={<SetTimer />} />
-//       <Route path="/timerAnalog" element={<TimerAnalog />} />
-//       <Route path="/timerDigital" element={<TimerDigital />} />
