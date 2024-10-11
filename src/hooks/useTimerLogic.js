@@ -4,6 +4,8 @@ import Timer from 'easytimer.js';
 
 export const useTimerLogic = ({ countdown = true, startValues }) => {
   const [timer] = useState(() => new Timer());
+  const [isRunning, setIsRunning] = useState(false);
+
   const [timeValues, setTimeValues] = useState({
     secondTenths: 0,
     seconds: startValues.seconds || 0,
@@ -11,7 +13,6 @@ export const useTimerLogic = ({ countdown = true, startValues }) => {
     hours: 0,
     days: 0,
   });
-  const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     const updateHandler = () => {
