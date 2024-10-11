@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './styling/timerDigital.scss';
 import { useLocation } from 'react-router-dom';
 import { useTimerLogic } from '../hooks/useTimerLogic';
+import AbortButton from '../components/abortButton/AbortButton';
 
 const TimerDigital = () => {
   const location = useLocation();
@@ -31,6 +32,7 @@ const TimerDigital = () => {
             <div className="timer-digital__container--seconds">
               {formattedSeconds}
             </div>
+            <AbortButton />
           </article>
         </div>
       </section>
