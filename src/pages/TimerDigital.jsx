@@ -13,6 +13,9 @@ const TimerDigital = () => {
     startValues: startCount,
   });
 
+  // 1. Kolla om du kan trigga något (ö.h.t) när
+  // timer träffar 00:00
+
   const formattedMinutes = String(timeValues.minutes).padStart(2, '0');
   const formattedSeconds = String(timeValues.seconds).padStart(2, '0');
 
