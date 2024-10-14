@@ -4,6 +4,8 @@ import Navbar from '../components/navbar/Navbar';
 import Overlay from '../components/overlay/Overlay';
 import { routes } from '../App';
 
+// Vill du trigga overlay på samma sätt, eller ev modifiera din hook att lämna ett begripligt objekt du kan använda när timern når 00:00?
+
 const Layout = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
 
