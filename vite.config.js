@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: 'https://mrmarre.github.io/IntervalTimer-react-docker/',
+  base: 'IntervalTimer-react-docker/',
   server: {
     watch: {
       usePolling: true,
