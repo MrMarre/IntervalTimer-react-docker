@@ -2,7 +2,8 @@ name: Deploy IntervalTimer App
 
 on:
   push:
-    branches: ['main']
+    branches:
+      - main
 
 permissions:
   contents: read
