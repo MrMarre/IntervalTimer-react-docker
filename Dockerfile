@@ -18,3 +18,10 @@ EXPOSE 5173
 
 # Vilket kommando?
 CMD [ "npm", "run", "dev" ]
+
+
+# docker image build -t imageNamnet:latest .
+# för att bygga första bilden
+
+# när den är byggd kör du:
+    # docker run -p 5173:5173 "containerNamn" mellanslap imageNamnet
