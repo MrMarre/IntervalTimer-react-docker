@@ -19,38 +19,47 @@ import VisualTimer from './pages/VisualTimer';
 import TextTimer from './pages/TextTimer';
 import CirclesTimer from './pages/CirclesTimer';
 
-export const routes = [
-  {
-    path: '/setTimer',
-    element: <SetTimer />,
-    label: 'Set Timer',
-  },
-  {
-    path: '/timerAnalog',
-    element: <TimerAnalog />,
-    label: 'Analog Timer',
-  },
-  {
-    path: '/timerDigital',
-    element: <TimerDigital />,
-    label: 'Digital Timer',
-  },
-  {
-    path: '/visualTimer',
-    element: <VisualTimer />,
-    label: 'Visual Timer',
-  },
-  {
-    path: '/textTimer',
-    element: <TextTimer />,
-    label: 'Text Timer',
-  },
-  {
-    path: '/circlesTimer',
-    element: <CirclesTimer />,
-    label: 'Circles Timer',
-  },
-];
+function isProduction() {
+  console.log(import.meta.env);
+
+  if (import.meta.env.PROD) return { basename: import.meta.env.BASE_URL };
+  else return {};
+}
+
+export const routes =
+  ([
+    {
+      path: '/setTimer',
+      element: <SetTimer />,
+      label: 'Set Timer',
+    },
+    {
+      path: '/timerAnalog',
+      element: <TimerAnalog />,
+      label: 'Analog Timer',
+    },
+    {
+      path: '/timerDigital',
+      element: <TimerDigital />,
+      label: 'Digital Timer',
+    },
+    {
+      path: '/visualTimer',
+      element: <VisualTimer />,
+      label: 'Visual Timer',
+    },
+    {
+      path: '/textTimer',
+      element: <TextTimer />,
+      label: 'Text Timer',
+    },
+    {
+      path: '/circlesTimer',
+      element: <CirclesTimer />,
+      label: 'Circles Timer',
+    },
+  ],
+  isProduction());
 
 const router = createBrowserRouter(
   createRoutesFromElements(
