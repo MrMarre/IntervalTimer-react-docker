@@ -1,0 +1,36 @@
+@use '../../sass' as *;
+
+.overlay {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: $pageWitdh;
+  height: $pageHeight;
+  overflow: hidden;
+
+  &__content {
+    background-color: rgb(31, 30, 30);
+
+    height: $pageHeight;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--icon {
+      background-color: rgba(255, 255, 255, 0.09);
+      border-radius: 6rem;
+      height: 152px;
+      width: 152px;
+      box-shadow: 0px 0px 0px 41px rgba(255, 255, 255, 0.03),
+        0px 0px 0px 96px rgba(255, 255, 255, 0.02),
+        0px 0px 0px 177px rgba(255, 255, 255, 0.01);
+      @include displayFlex();
+    }
+  }
+  .alarmBell {
+    width: 85px;
+    height: 85px;
+  }
+}
