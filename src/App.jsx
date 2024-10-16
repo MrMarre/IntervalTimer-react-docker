@@ -61,7 +61,6 @@ export const routes = [
     label: 'Circles Timer',
   },
 ];
-console.log(ap);
 
 const router = createBrowserRouter(
   createRoutesFromElements(
