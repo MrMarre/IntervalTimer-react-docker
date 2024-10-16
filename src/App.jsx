@@ -29,6 +29,10 @@ function isProduction() {
 export const routes =
   ([
     {
+      path: '/',
+      element: <Landing />,
+    },
+    {
       path: '/setTimer',
       element: <SetTimer />,
       label: 'Set Timer',
