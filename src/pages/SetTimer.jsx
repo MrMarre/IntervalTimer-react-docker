@@ -4,10 +4,11 @@ import './styling/setTimer.scss';
 import LeftVector from '../assets/Vector-left.svg';
 import RightVector from '../assets/Vector-right.svg';
 import { useNavigate } from 'react-router-dom';
+import { useTimer } from '../providers/TimerProvider';
 
-// Prolly skicka iväg count som props
 const SetTimer = () => {
   const [count, setCount] = useState(0);
+  const { startTimer } = useTimer();
 
   const increment = () => {
     setCount((prevCount) => prevCount + 1);
@@ -19,10 +20,9 @@ const SetTimer = () => {
 
   const navigate = useNavigate();
   const handleNavigate = () => {
+    startTimer({ minutes: 0, seconds: count });
     console.log('Navigating with startCount:', { minutes: count, seconds: 0 });
-    navigate('/timerDigital', {
-      state: { startCount: { minutes: count, seconds: 0 } },
-    });
+    navigate('/timerDigital');
   };
   console.log(count);
 

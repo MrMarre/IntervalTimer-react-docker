@@ -9,6 +9,7 @@ import AlarmView from '../components/overlay/AlarmView';
 
 const Layout = () => {
   const [isOverlayVisible, setIsOverlayVisible] = useState(false);
+  const [isTimesUpVisible, setIsTimesUpVisible] = useState(false);
 
   const toggleOverlay = () => {
     setIsOverlayVisible((prevState) => !prevState);
@@ -28,7 +29,7 @@ const Layout = () => {
         onClose={toggleOverlay}
         links={links}
       />
-      <AlarmView />
+      <AlarmView isVisible={isTimesUpVisible} />
     </>
   );
 };
