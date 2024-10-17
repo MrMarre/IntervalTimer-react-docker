@@ -1,12 +1,12 @@
 @use '../../sass' as *;
 
 .timer-digital {
-  height: 100%;
-  width: 100%;
+  background-color: 0px 0px 0px 76px rgba(255, 255, 255, 0.96);
   background-color: $timerBackround;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 
   &__container {
     width: 182px;

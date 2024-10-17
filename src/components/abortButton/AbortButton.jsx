@@ -1,10 +1,18 @@
 import React from 'react';
 import './abortButton.scss';
+import { useNavigate } from 'react-router-dom';
 
 const AbortButton = () => {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate('/setTimer');
+  };
+
   return (
     <>
-      <button className="abort">ABORT TIMER</button>
+      <button onClick={handleNavigate} className="abort">
+        ABORT TIMER
+      </button>
     </>
   );
 };

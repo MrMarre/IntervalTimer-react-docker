@@ -3,25 +3,20 @@ import './styling/timerDigital.scss';
 import { useLocation } from 'react-router-dom';
 import { useTimerLogic } from '../hooks/useTimerLogic';
 import AbortButton from '../components/abortButton/AbortButton';
+import { useTimer } from '../providers/TimerProvider';
 
 const TimerDigital = () => {
   const location = useLocation();
-  const startCount = location.state?.startCount || { minutes: 0, seconds: 0 };
+  // const startCount = location.state?.startCount || { minutes: 0, seconds: 0 };
+  const { timeValues } = useTimer();
 
-  const { timeValues, startTimer } = useTimerLogic({
-    countdown: true,
-    startValues: startCount,
-  });
-
-  // 1. Kolla om du kan trigga något (ö.h.t) när
-  // timer träffar 00:00
-
-  const formattedMinutes = String(timeValues.minutes).padStart(2, '0');
-  const formattedSeconds = String(timeValues.seconds).padStart(2, '0');
-
-  useEffect(() => {
-    startTimer();
-  }, [startTimer, startCount]);
+  //*  Trycker du på tiden så pausa timer
+  const formattedMinutes = timeValues
+    ? String(timeValues.minutes).padStart(2, '0')
+    : '00';
+  const formattedSeconds = timeValues
+    ? String(timeValues.seconds).padStart(2, '0')
+    : '00';
 
   return (
     <>

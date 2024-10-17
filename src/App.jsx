@@ -12,8 +12,6 @@ import TimerAnalog from './pages/TimerAnalog';
 import TimerDigital from './pages/TimerDigital';
 import Landing from './pages/landing';
 import SetTimer from './pages/SetTimer';
-import AlarmView from './pages/AlarmView';
-import BreakView from './pages/BreakView';
 import Layout from './pages/Layout';
 import VisualTimer from './pages/VisualTimer';
 import TextTimer from './pages/TextTimer';
