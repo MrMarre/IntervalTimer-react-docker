@@ -16,6 +16,7 @@ import Layout from './pages/Layout';
 import VisualTimer from './pages/VisualTimer';
 import TextTimer from './pages/TextTimer';
 import CirclesTimer from './pages/CirclesTimer';
+import { TimerProvider } from './providers/TimerProvider';
 
 function isProduction() {
   console.log(import.meta.env);
@@ -76,9 +77,9 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <>
+    <TimerProvider>
       <RouterProvider router={router} />
-    </>
+    </TimerProvider>
   );
 }
 
