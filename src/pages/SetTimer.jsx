@@ -4,11 +4,11 @@ import './styling/setTimer.scss';
 import LeftVector from '../assets/Vector-left.svg';
 import RightVector from '../assets/Vector-right.svg';
 import { useNavigate } from 'react-router-dom';
-import { useTimer } from '../providers/TimerProvider';
+import { useTimerContext } from '../providers/TimerProvider';
 
 const SetTimer = () => {
   const [count, setCount] = useState(0);
-  const { startTimer } = useTimer();
+  const { startTimer } = useTimerContext();
 
   const increment = () => {
     setCount((prevCount) => prevCount + 1);
@@ -20,11 +20,10 @@ const SetTimer = () => {
 
   const navigate = useNavigate();
   const handleNavigate = () => {
-    startTimer({ minutes: 0, seconds: count });
     console.log('Navigating with startCount:', { minutes: count, seconds: 0 });
+    startTimer({ minutes: count, seconds: 0 });
     navigate('/timerDigital');
   };
-  console.log(count);
 
   return (
     <>
@@ -41,11 +40,11 @@ const SetTimer = () => {
         <article className="controls">
           <article className="controls__row-one">
             <input className="intervals" name="intervals" type="checkbox" />
-            <label for="intervals">intervals</label>
+            <label htmlFor="intervals">intervals</label>
           </article>
           <article className="row-two">
             <input className="break" name="break" type="checkbox" />
-            <label for="break">5 min break / interval</label>
+            <label htmlFor="break">5 min break / interval</label>
           </article>
           <button className="start" onClick={handleNavigate}>
             START TIMER
