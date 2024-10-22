@@ -4,9 +4,8 @@ import AbortButton from '../components/abortButton/AbortButton';
 import { useTimerContext } from '../providers/TimerProvider';
 
 const TimerDigital = () => {
-  // const location = useLocation();
-  // const startCount = location.state?.startCount || { minutes: 0, seconds: 0 };
-  const { timeValues, toggleTimer } = useTimerContext();
+  const { timeValues, setTimeValues, toggleTimer, stopTimer } =
+    useTimerContext();
 
   //*  Trycker du på tiden så pausa timer
   const formattedMinutes = timeValues
@@ -33,7 +32,7 @@ const TimerDigital = () => {
               {formattedSeconds}
             </div>
 
-            <AbortButton />
+            <AbortButton onClick={stopTimer} />
           </article>
         </div>
       </section>
