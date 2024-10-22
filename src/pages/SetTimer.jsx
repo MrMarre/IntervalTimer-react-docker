@@ -8,7 +8,7 @@ import { useTimerContext } from '../providers/TimerProvider';
 
 const SetTimer = () => {
   const [count, setCount] = useState(0);
-  const { startTimer } = useTimerContext();
+  const { startTimer, timeValues } = useTimerContext();
 
   const increment = () => {
     setCount((prevCount) => prevCount + 1);
@@ -20,6 +20,8 @@ const SetTimer = () => {
 
   const navigate = useNavigate();
   const handleNavigate = () => {
+    console.log(timeValues);
+
     console.log('Navigating with startCount:', { minutes: count, seconds: 0 });
     startTimer({ minutes: count, seconds: 0 });
     navigate('/timerDigital');

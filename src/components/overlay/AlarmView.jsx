@@ -2,7 +2,6 @@ import React from 'react';
 import './alarmView.scss';
 
 import alarmIcon from '../../assets/alarmIcon.svg';
-import { useNavigate } from 'react-router-dom';
 
 const AlarmView = ({ isVisible, onClose }) => {
   if (!isVisible) return null;
